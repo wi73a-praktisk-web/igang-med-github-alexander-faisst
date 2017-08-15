@@ -13,7 +13,7 @@
 http://github.com/new - automatic!
 1. Link with a hidden url, points to the same location as the link above, but prettier [GitHub](http://github.com/new) 
 
-## Emphasis Illustration
+# Emphasis Illustration & Strikethrough
 
 
 *This text will be italic*
@@ -25,6 +25,8 @@ _This will also be italic_
 __This will also be bold__
 
 _You **can** combine them_
+
+~~Some **crossed out** text~~
 
 ## How *Console.log('')* works: 
 
@@ -56,3 +58,17 @@ As Kanye West said:
 # Inline code
 I think you should use an
 `<addr>` element here instead.
+
+# Task Lists, example
+
+- [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
+- [x] list syntax required (any unordered or ordered list supported)
+- [x] this is a complete item
+- [ ] this is an incomplete item
+
+# Tables, example 
+
+First Header | Second Header
+------------ | -------------
+Content from cell 1 | Content from cell 2
+Content in the first column | Content in the second column
