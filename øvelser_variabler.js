@@ -11,7 +11,7 @@ var tekst = `Mit navn er ${navn} og jeg er ${alder} år gammel`;
 
 // Øvelse 1.4 
 
-console.log("tekst = " + tekst);
+console.log(tekst);
 
 //Øvelse 2.1 
 
