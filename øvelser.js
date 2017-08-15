@@ -261,6 +261,7 @@ console.log("anden = " + anden);
 */
 
 //Øvelse 6.1,6.2 & 6.3
+
 var navne = ["Alex Faisst", "Peter Hansen", "Malte Mulbjerg", "Jesper Rasmussen", "Sofie Nielsen", "Rita Andersen"];
 var fodselsdage = ["03,05,1991","17,11,1995","21,07,1776","16,05,1994","22,06,1996","27,09,1998"];
 var bynavne = ["København","Odense","Aarhus","Frederiksværk","Roskilde", "Holbæk"];
