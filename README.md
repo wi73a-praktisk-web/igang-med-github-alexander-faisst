@@ -37,14 +37,14 @@ _You **can** combine them_
 ### What appears to be a normal link
 ![GitHub Logo](https://assets-cdn.github.com/images/modules/logos_page/Octocat.png)
 ### What appears to be the same link but with an alternative text in case something goes wrong
-Format: ![Alt Text](https://assets-cdn.github.com/images/modules/logos_page/Octocat.png)
+Alt Text: ![Alt Text](https://assets-cdn.github.com/images/modules/logos_page/Octocat.png)
 
 
-# Image located in local folderinternetz
+# Image located in local folder
 ### What appears to be a normal link
 ![GitHub Logo](Octocat.png)
 ### What appears to be the same link but with an alternative text in case something goes wrong
-Format: ![Octocat.png](Octocat.png)
+Alt Text: ![Octocat.png](Octocat.png)
 
 
 # Blockquotes
