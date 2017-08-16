@@ -25,4 +25,8 @@ cars.forEach(logEachItem);
 //while_loops
 
 var j = 0;
+while(j <= 50){
+    console.log("j = " + j);
+    j++;
+}
 
