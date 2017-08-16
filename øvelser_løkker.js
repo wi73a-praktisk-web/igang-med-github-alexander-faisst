@@ -107,9 +107,11 @@ artists.forEach(function(artist, index){
 //Øvelse 3.1
 var numbers = [];
 for(i = 0; i <= 10; i++){
-    numbers[i] = getRandomInt(0,100);
+    numbers.push(getRandomInt(0,100));
     console.log("numbers[" + i + "] = " + numbers[i]);
 }
+
+console.dir(numbers);
 
 //Øvelse 3.2 + 3.3 (2 solutions, both work deliciously)
 
@@ -135,7 +137,7 @@ for(i = 0; i <= 10; i++){
 }); */
 
 // -------------------------------------------- FUNCTION DEFINED EXTERNALLY AND THEN CALLED ------------------------
-
+/* 
 function checkSmallerOrBigger(number, index){
     var x = numbers[index + 1];
     if(numbers[index] > x){
@@ -155,4 +157,4 @@ function checkSmallerOrBigger(number, index){
     }
 }
 
-numbers.forEach(checkSmallerOrBigger);
+numbers.forEach(checkSmallerOrBigger); */
