@@ -97,24 +97,6 @@ else{
 }
 
 //Øvelse 5 
-/* var name = "Egon";
-switch (name) {
-   case "Egon":
-      console.log('Han har en plan');
-      break;
-   case "Finn":
-      console.log('Ønsker medvind på cykelstierne');
-      break;
-   case "Georg":
-      console.log('Får en lys ide');
-
-   case "Hjælper":
-      console.log(' er lille');
-      break;
-   default:
-      console.log('ukendt');
-      break;
-} */
 
 var drik = "faxe_kondi";
 switch(drik) {
