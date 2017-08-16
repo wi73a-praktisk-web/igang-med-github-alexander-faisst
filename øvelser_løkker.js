@@ -111,8 +111,11 @@ for(i = 0; i <= 10; i++){
     console.log("numbers[" + i + "] = " + numbers[i]);
 }
 
-//Øvelse 3.2 + 3.3
-numbers.forEach(function(number, index){
+//Øvelse 3.2 + 3.3 (2 solutions, both work deliciously)
+
+//-------------------------------- ANONYMOUS FUNCTION INSIDE FOR EACH LOOP ---------------------------
+
+/* numbers.forEach(function(number, index){
     var x = numbers[index + 1];
     if(numbers[index] > x){
         console.log("numbers[index] = " + numbers[index]);
@@ -129,4 +132,27 @@ numbers.forEach(function(number, index){
         console.log("x = " + x);
         console.log("the next item is bigger than this one ");
     }
-});
+}); */
+
+// -------------------------------------------- FUNCTION DEFINED EXTERNALLY AND THEN CALLED ------------------------
+
+function checkSmallerOrBigger(number, index){
+    var x = numbers[index + 1];
+    if(numbers[index] > x){
+        console.log("numbers[index] = " + numbers[index]);
+        console.log("x = " + x);
+        console.log("the next item is smaller than this one ");
+    }
+    else if(numbers[index] === x){
+        console.log("numbers[index] = " + numbers[index]);
+        console.log("x = " + x);
+        console.log("they are both equal");
+    }
+    else if(numbers[index] < x){
+        console.log("numbers[index] = " + numbers[index]);
+        console.log("x = " + x);
+        console.log("the next item is bigger than this one ");
+    }
+}
+
+numbers.forEach(checkSmallerOrBigger);
