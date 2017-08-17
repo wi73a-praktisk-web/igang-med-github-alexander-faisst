@@ -5,12 +5,15 @@
         * the day, month and year having correct values
         * the 7th digit (technically) matching the year's value
     if either one of the cases above fail, the program breaks or throws a simple error message
+
+    i am however considering also running a check/control on the entire number, using the modulus-11 method. However, ït's 
+    been officially outdated since 2007, so it would mostly be for experimental purposes. 
 */
 
 /* var cpr_number = "0104909995"; */
-/* var cpr_number = "0411923193"; */
+var cpr_number = "04111923193";
 
-var cpr_number = "1509819996";
+// var cpr_number = "1509819996";
 
 function checkCPR(number) {
     //check at nummeret har den rigtige længde
@@ -34,7 +37,7 @@ function checkCPR(number) {
         console.log("year = " + year);
         var cp7 = parseInt(cpr_number[6]);
         console.log("cp7 = " + cp7);
-        var gender = getGender(cpr_number.charAt(9));
+        var gender = cpr_number.charAt(9)%2 == 0 ? 'woman' : 'man';
         //check at dagen har en korrekt værdi
         if (day >= 1 && day <= 31) {
             console.log("the day is valid")
@@ -113,16 +116,6 @@ function checkCPR(number) {
     }
     else {
         console.log("the number has the wrong length and is invalid ")
-    }
-}
-
-function getGender(n) {
-    var x = n % 2;
-    if (x == 0) {
-        return "woman";
-    }
-    else if (x == 1) {
-        return "man";
     }
 }
 

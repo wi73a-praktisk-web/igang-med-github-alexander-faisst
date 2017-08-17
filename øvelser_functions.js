@@ -56,9 +56,9 @@ var output;
 var s = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce interdum libero nec ante tristique";
 var n = 0, m = 10;
 
-var substring = (s,n,m) => console.log(s.substring(n,m));
+var substring = (s,n,m) => s.length >= m ? console.log(s.substr(n,m)) : console.log("the string is shorter than the 'end' index");
 var split = s => console.log(s.split(" ")); //... could also split at commas or anything else
-var slice = (s,n,m) => console.log(s.split(n,m));
+var slice = (s,n,m) => console.log(s.split(n,m)); //"end" is up to but not including, so this one can't really fail, as opposed to substring
 
 substring(s,0,10);
 split(s);
