@@ -11,7 +11,7 @@
 */
 
 /* var cpr_number = "0104909995"; */
-var cpr_number = "04111923193";
+var cpr_number = "0411923193";
 
 // var cpr_number = "1509819996";
 
@@ -61,12 +61,12 @@ function checkCPR(number) {
                         case 4:
                             if (year >= 00 && year <= 36) {
                                 var fullYear = parseInt("20" + year);
-                                var age = 2017 - fullYear;
+                                var age = new Date().getFullYear() - fullYear;
                                 console.log("the person's age is = " + age + " and the gender is = " + gender);
                             }
                             else if (year >= 37 && year <= 99) {
                                 var fullYear = parseInt("19" + year);
-                                var age = 2017 - fullYear;
+                                var age = new Date().getFullYear() - fullYear;
                                 console.log("the person's age is = " + age + " and the gender is = " + gender);
                             }
                             break;
@@ -74,12 +74,12 @@ function checkCPR(number) {
                         case 5: case 6: case 7: case 8:
                             if (year >= 00 && year <= 57) {
                                 var fullYear = parseInt("20" + year);
-                                var age = 2017 - fullYear;
+                                var age = new Date().getFullYear() - fullYear;
                                 console.log("the person's age is = " + age + " and the gender is = " + gender);
                             }
                             else if (year >= 58 && year <= 99) {
                                 var fullYear = parseInt("18" + year);
-                                var age = 2017 - fullYear;
+                                var age = new Date().getFullYear() - fullYear;
                                 console.log("the person's age is = " + age + " and the gender is = " + gender);
                             }
                             break;
