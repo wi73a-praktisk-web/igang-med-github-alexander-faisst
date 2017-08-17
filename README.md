@@ -100,9 +100,9 @@ Operator | Description
 \> | Bigger than
 <= | Smaller than or equal
 \>= | Bigger than or equal
-+ | Operator for addition
-- | Operator for subtraction
-* | Operator for multiplication
+ \+ | Operator for addition
+\- | Operator for subtraction
+\* | Operator for multiplication
 / | Operator for division
 % | Operator for modulus 
 && | Both conditions have to be true
