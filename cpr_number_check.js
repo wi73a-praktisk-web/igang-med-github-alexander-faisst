@@ -1,24 +1,15 @@
 /*
-    this version right now is super basic
     it checks for: 
         * the number being 10 characters long
         * those characters being nothing but digits
         * the day, month and year having correct values
         * the 7th digit (technically) matching the year's value
     if either one of the cases above fail, the program breaks or throws a simple error message
-    
-    NOTE: som algoritmen er skrevet lige nu, kan den godt spytte mærkelige resultater ud ift. sammenligningen af det 7. ciffer og årstallet - 
-    dette skyldes at det 7. ciffer både kan indikere at man er født helt tilbage i 1858, eller så langt inde i fremtiden som 2057. 
-
-    Jeg vil undersøge om man kan programmere sig uden om dette problem, men hvis ikke, så kan det være at der bare kræves en vis mængde 
-    sund fornuft udover de funktioner som algoritmen dækker over. 
-
-    Derudover har jeg tænkt mig at tilføje funktionalitet der siger noget om, om man er mand eller kvinde baseret på sit cpr nummer - 
-    teknisk set findes dette ikke længere siden 2007, men sådan bare for sjovt - for my purposes it should still largely work.  
 */
 
 /* var cpr_number = "0104909995"; */
 /* var cpr_number = "0411923193"; */
+
 var cpr_number = "1509819996";
 
 function checkCPR(number) {
@@ -61,7 +52,6 @@ function checkCPR(number) {
                                 var fullYear = parseInt("19" + year);
                                 var age = 2017 - fullYear;
                                 console.log("the person's age is = " + age + " and the gender is = " + gender);
-                                /* console.log("cipher #7 checks out"); */
                             }
                             break;
                         //cp7 is 4
@@ -75,7 +65,6 @@ function checkCPR(number) {
                                 var fullYear = parseInt("19" + year);
                                 var age = 2017 - fullYear;
                                 console.log("the person's age is = " + age + " and the gender is = " + gender);
-                                /* console.log("cipher #7 checks out"); */
                             }
                             break;
                         //cp7 between 5 and 8 (both inclusive)
@@ -89,7 +78,6 @@ function checkCPR(number) {
                                 var fullYear = parseInt("18" + year);
                                 var age = 2017 - fullYear;
                                 console.log("the person's age is = " + age + " and the gender is = " + gender);
-                                /* console.log("cipher #7 checks out"); */
                             }
                             break;
                         //cp7 is 9
@@ -103,7 +91,6 @@ function checkCPR(number) {
                                 var fullYear = parseInt("19" + year);
                                 var age = 2017 - fullYear;
                                 console.log("the person's age is = " + age + " and the gender is = " + gender);
-                                /* console.log("cipher #7 checks out"); */
                             }
                             break;
                         //cp7 is invalid
@@ -140,5 +127,3 @@ function getGender(n) {
 }
 
 checkCPR(cpr_number);
-
-
