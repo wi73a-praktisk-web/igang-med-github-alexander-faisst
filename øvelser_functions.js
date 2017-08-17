@@ -54,8 +54,7 @@ sqRt();
 //Øvelse 2
 var output;
 var s = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce interdum libero nec ante tristique";
-var n = 0;
-var m = 10;
+var n = 0, m = 10;
 
 var substring = (s,n,m) => console.log(s.substring(n,m));
 var split = s => console.log(s.split(" ")); //... could also split at commas or anything else
