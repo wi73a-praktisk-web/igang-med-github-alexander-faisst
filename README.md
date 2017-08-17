@@ -84,6 +84,7 @@ For/in Loop | Loops through the properties of an object
 For/of Loop | Loops through a objects enumerables
 While Loop | loops through a block of code while a specified condition is true
 Do/while Loop | also loops through a block of code while a specified condition is true 
+For Each Loop | Performs an operation once for every element in the collection (usually used for iterating through arrays)
 
 ### Documentation Operators
 
@@ -96,9 +97,9 @@ Operator | Description
 != | Not equal
 !== | Not equal value or type
 < | Smaller than
-> | Bigger than
+\> | Bigger than
 <= | Smaller than or equal
->= | Bigger than or equal
+\>= | Bigger than or equal
 + | Operator for addition
 - | Operator for subtraction
 * | Operator for multiplication
