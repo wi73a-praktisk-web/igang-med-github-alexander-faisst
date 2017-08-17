@@ -51,7 +51,7 @@ if(check){
 //Øvelse 1.3
 check = false;
 if(check){
-    console.log("hej verden");
+    console.log("hej verden"); //der logges ikke
 }
 
 //Øvelse 2.1
@@ -114,3 +114,4 @@ switch(drik) {
         break;
 }
 
+//Øvelse 6 - se readme.md
