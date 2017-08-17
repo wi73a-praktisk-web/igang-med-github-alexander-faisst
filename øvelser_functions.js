@@ -63,3 +63,11 @@ var slice = (s,n,m) => console.log(s.split(n,m)); //"end" is up to but not inclu
 substring(s,0,10);
 split(s);
 slice(s,n,m);
+
+//Øvelse 3.1 - 3.4
+var profile = p => console.log(p[0] + " " + p[1] + "\n" + " er født i " + p[2]  + "\n" + " og er " + (2017 - p[2]) + " år gammel");
+profile(["Alexander","Faisst",1992]);
+
+//Ekstra udfordringer A
+var profile = (p,n) => n ? console.log(p[n]) : console.log(p);
+profile([["Alexander","Faisst",1992],["Brian","Olsen",1995],["Hanne","Simonsen",1991],["Lisa","Andersen",1989]]);
