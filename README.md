@@ -2,8 +2,8 @@
 
 ### Documentation Loops
 
-Loop | Description
------|------------
+Loop | Description| Example 
+-----|------------|----------------
 For Loop | Loops through a block of code a number of times | `for(i = 0; i < arr.length; i++) { execute code }`
 For/in Loop | Loops through the properties of an object | `for(var value in iterable) { execute code }`
 For/of Loop | Loops through a objects enumerables | `for(var value of iterable) { execute code }`
@@ -13,7 +13,7 @@ For Each Loop | Performs an operation once for every element in the collection (
 
 ### Documentation Operators
 
-Operator | Description |
+Operator | Description | Example
 ---------|-------------|-------------
 = | Used to check for true/false in case of booleans | if(check = true)
 == | Equal to | if(x == 2)
