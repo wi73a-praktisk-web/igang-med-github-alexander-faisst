@@ -1,5 +1,5 @@
 //BMI 
-/* var bmi = (w, h) => {
+var bmi = (w, h) => {
     var x = (w / h).toFixed(1);
     console.log(x + ' ' + h + ' ' + w);
     switch (true) {
@@ -24,15 +24,9 @@
     }
 }
 
-bmi(65, (Math.pow(1.75, 2))); */
+bmi(65, (Math.pow(1.75, 2)));
 
 //Fartbøder
-/* hastighedsbregrænsning
-kørt hastighed
-vejarbejde j/n
-
-Funktionen skal beregne og returnere bødetaksten, 
-og evtentuelle Klip, betinget- eller ubetinget frakendelsle af kørekorten. */
 
 var fartbode = (max, actual, roadwork) => {
     var bodetakst = 0;
@@ -289,7 +283,6 @@ var fartbode = (max, actual, roadwork) => {
     if (roadwork) {
         bodetakst = (bodetakst * 2);
     }
-    //console.log("Bødetakst: " + bodetakst + ",\n" + "Klip: " + klip + ",\n" + "Betinget frakendelse: " + betinget + ",\n" + "Ubetinget frakendelse: " + ubetinget);
 }
 
 fartbode(80, 200, true);
@@ -298,46 +291,35 @@ fartbode(80, 200, true);
  * promille = promille
  * x = amount of times stopped
  * y = amount of years having had a license
- * funktionen virker sådan nogenlunde, men lige foreløbigt har jeg brug for at lave noget andet/en anden opgave
+ * tidligere problemer burde være blevet løste, mangler bare at tjekke at alting stemmer overens med informationen på hjemmesiden
  */
 
 var spritkorsel = (promille, x, y) => {
     var bode = "";
     var konsekvenser = "";
-    var betinget = false;
-    var fangselBetinget10Dage = false, fangselBetinget20Dage = false, fangselBetinget30Dage = false;
-    var fangselUbetinget30Dage = false, fangselUbetinget50Dage = false;
-    var fangselUbetingetMindst20Dage = false, fangselUbetingetMindst40Dage = false;
-    var forbudPermanent = false;
-    var forbudMindst3Aar = false;
-    var forbud3AarUbetinget = false, forbud5AarUbetinget = false;
 
     switch (x) {
         case 1:
             switch (true) {
                 case promille >= 0.51 && promille <= 2.1:
-                    betinget = true;
-                    konsekvenser += "betinget frakendelse" + betinget.toString();
+                    konsekvenser += "Betinget frakendelse af kørekort";
                     break;
                 case promille >= 1.2:
-                    forbudMindst3Aar = true;
-                    konsekvenser += "Frakendelse i mindst 3 år " + forbudMindst3Aar.toString();
+                    konsekvenser += "Frakendelse af kørekort i mindst 3 år";
                     break;
                 case promille >= 0.5 && y <= 3:
                     if (y < 3) {
-                        forbudPermanent = true;
-                        konsekvenser += "Ubetinget permanent frakendelse " + forbudPermanent.toString();
+                        konsekvenser += "Ubetinget permanent frakendelse af kørekort";
                     }
                     break;
                 case promille >= 2:
-                    fangselBetinget20Dage = true;
-                    konsekvenser += "betinget fængsel i 20 dage " + fangselBetinget20Dage.toString();
+                    konsekvenser += "Betinget fængsel i 20 dage";
                     break;
                 case promille >= 0.51 && promille <= 2.0:
-                    bode = "netto maanedslon x promille";
+                    bode = "Netto månedslon x promille";
                     break;
                 case promille >= 2.1:
-                    bode = "netto maanedslon";
+                    bode = "Netto månedsløn";
                     break;
                 default:
                     console.log("invalid value inner 1");
@@ -347,25 +329,20 @@ var spritkorsel = (promille, x, y) => {
         case 2:
             switch (true) {
                 case promille >= 0.51 && promille <= 1.2:
-                    forbud3AarUbetinget = true;
-                    fangselBetinget10Dage = true;
-                    konsekvenser += "betinget frakendelse" + forbud3AarUbetinget.toString() + "betinget fængsel i 10 dage = " + fangselBetinget10Dage.toString();
+                    konsekvenser += "Ubetinget frakendelse af kørekort i 3 år og Betinget fængsel i 10 dage = ";
                     bode = "netto månedsløn";
                     break;
                 case promille >= 1.2:
-                    forbud5AarUbetinget = true;
-                    konsekvenser += "5 års ubetinget frakendelse" + forbud5AarUbetinget.toString();
-                    bode = "netto månedsløn";
+                    konsekvenser += "5 års ubetinget frakendelse af kørekort";
+                    bode = "Netto månedsløn";
                     break;
                 case promille >= 1.21 && y <= 3:
-                    fangselBetinget10Dage = true;
-                    konsekvenser += "betinget fængsel 10 dage" + fangselBetinget10Dage.toString();
+                    konsekvenser += "Betinget fængsel 10 dage";
                     bode = "netto månedsløn";
                     break;
                 case promille >= 2:
-                    fangselBetinget30Dage = true;
-                    konsekvenser += "betinget frakendelse" + fangselBetinget30Dage.toString();
-                    bode = "netto månedsløn";
+                    konsekvenser += "Betinget frakendelse af kørekort i 30 dage";
+                    bode = "Netto månedsløn";
                     break;
                 default:
                     console.log("invalid value inner 2");
@@ -375,21 +352,16 @@ var spritkorsel = (promille, x, y) => {
         case 3:
             switch (true) {
                 case promille >= 0.51 && promille <= 1.2:
-                    bode = "netto månedsløn";
-                    forbud3AarUbetinget = true;
-                    fangselUbetingetMindst20Dage = true;
-                    konsekvenser += "3 års ubetinget frakendelse" + forbud3AarUbetinget.toString() + "ubetinget fængsel i mindst 20 dage" + fangselUbetingetMindst20Dage.toString();
+                    bode = "Netto månedsløn";
+                    konsekvenser += "3 års ubetinget frakendelse af kørekort og ubetinget fængsel i mindst 20 dage";
                     break;
                 case promille >= 1.21 && promille <= 2.0:
-                    bode = "netto månedsløn";
-                    fangselUbetingetMindst20Dage = true;
-                    forbud10AarUbetinget = true;
-                    konsekvenser += "ubetinget fængsel i mindst 20 dage = " + fangselUbetingetMindst20Dage.toString() + "10 års ubetinget forbud" + forbud10AarUbetinget.toString();
+                    bode = "Netto månedsløn";
+                    konsekvenser += "Ubetinget fængsel i mindst 20 dage og 10 års ubetinget frakendelse af kørekort";
                     break;
                 case promille >= 2:
-                    bode = "netto månedsløn";
-                    fangselUbetingetMindst40Dage = true;
-                    konsekvenser += "40 års ubetinget fængsel" + fangselUbetingetMindst40Dage.toString();
+                    bode = "Netto månedsløn";
+                    konsekvenser += "40 års ubetinget fængsel";
                     break;
                 default:
                     console.log("invalid value inner 3");
@@ -399,14 +371,12 @@ var spritkorsel = (promille, x, y) => {
         case 4:
             switch (true) {
                 case promille >= 0.5 && promille <= 2:
-                    fangselUbetinget30Dage = true;
-                    konsekvenser += "30 dages ubetinget fængsel = " + fangselUbetinget30Dage.toString();
-                    bode = "fastsat af retten"
+                    konsekvenser += "30 dages ubetinget fængsel";
+                    bode = "Fastsat af retten"
                     break;
                 case promille >= 2:
-                    fangselUbetinget50Dage = true;
-                    konsekvenser += "50 dages ubetinget fængsel = " + fangselUbetinget50Dage.toString();
-                    bode = "fastsat af retten";
+                    konsekvenser += "50 dages ubetinget fængsel";
+                    bode = "Fastsat af retten";
                     break;
                 default:
                     console.log("invalid value inner 4");
@@ -418,11 +388,11 @@ var spritkorsel = (promille, x, y) => {
             break;
     }
 
-    var result = "Personen havde en promille på " + promille + "og har overtrådt loven den " + x + "'te gang. Derfor er bøden " + bode + " og konsekvenserne er " + konsekvenser;
+    var result = "Personen havde en promille på " + promille + " og har overtrådt loven den " + x + ". gang. Bøde " + bode + "; Konsekvenser: " + konsekvenser;
     console.log(result);
 }
 
-spritkorsel(1, 1, 4);
+spritkorsel(3, 4, 4);
 
 //Palindrome
 var palindrome = s => {
