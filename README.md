@@ -4,38 +4,50 @@
 
 Loop | Description
 -----|------------
-For Loop | Loops through a block of code a number of times
-For/in Loop | Loops through the properties of an object
-For/of Loop | Loops through a objects enumerables
-While Loop | loops through a block of code while a specified condition is true
-Do/while Loop | also loops through a block of code while a specified condition is true 
-For Each Loop | Performs an operation once for every element in the collection (usually used for iterating through arrays)
+For Loop | Loops through a block of code a number of times | `for(i = 0; i < arr.length; i++) { execute code }`
+For/in Loop | Loops through the properties of an object | `for(var value in iterable) { execute code }`
+For/of Loop | Loops through a objects enumerables | `for(var value of iterable) { execute code }`
+While Loop | loops through a block of code while a specified condition is true | `var i = 0; while(i < x){i++;]`
+Do/while Loop | also loops through a block of code while a specified condition is true | `do{ i++; }while(i < x>)`
+For Each Loop | Performs an operation once for every element in the collection (usually used for iterating through arrays) | `arr.forEach(function(item, index,arr)){execute code}`
 
 ### Documentation Operators
 
-Operator | Description
----------|------------
-= | Used to check for true/false in case of booleans
-== | Equal to
-=== | Equal value and equal type
-! | False
-!= | Not equal
-!== | Not equal value or type
-< | Smaller than
-\> | Bigger than
-<= | Smaller than or equal
-\>= | Bigger than or equal
- \+ | Operator for addition
-\- | Operator for subtraction
-\* | Operator for multiplication
-/ | Operator for division
-% | Operator for modulus 
-&& | Both conditions have to be true
-|| | One of two (or more) conditions has to be true
+Operator | Description |
+---------|-------------|-------------
+= | Used to check for true/false in case of booleans | if(check = true)
+== | Equal to | if(x == 2)
+=== | Equal value and equal type | if(x === 2)
+! | False | if(!check)
+!= | Not equal | if(x != 0)
+!== | Not equal value or type | if(x !=== 0)
+< | Smaller than | if(x < 0)
+\> | Bigger than | if( x > 0)
+<= | Smaller than or equal | if(x <= 0)
+\>= | Bigger than or equal | if(x >= 0)
+ \+ | Operator for addition | x + 2
+\- | Operator for subtraction | x - 2
+\* | Operator for multiplication | x * 2
+/ | Operator for division | x / 2
+% | Operator for modulus | x % 2
+&& | Both conditions have to be true | if(condition 1 && condition 2)
+|| | One of two (or more) conditions has to be true | if(condition 1 || condition 2)
 
 ### Documentation if-else 
 
 If-else statements make use of true/false values in order to compare all kinds of object. Depending on the input and the result of the comparison, they navigate through a virtual flow-chart in order to determine the correct outcome. If-else statements are often combined with different kinds of loops and operators (as described above). 
+
+```
+if(condtion) {
+    // exectue code ...
+}
+else if(condition) {
+    // execute code ...
+}
+else {
+    // execute code ...
+}
+```
 
 ### Documentation Functions
 
