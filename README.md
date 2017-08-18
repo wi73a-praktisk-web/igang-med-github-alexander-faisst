@@ -4,34 +4,34 @@
 
 Loop | Description| Example 
 -----|------------|----------------
-For Loop | Loops through a block of code a number of times | `for(i = 0; i < arr.length; i++) { execute code }`
-For/in Loop | Loops through the properties of an object | `for(var value in iterable) { execute code }`
-For/of Loop | Loops through a objects enumerables | `for(var value of iterable) { execute code }`
-While Loop | loops through a block of code while a specified condition is true | `var i = 0; while(i < x){i++;]`
-Do/while Loop | also loops through a block of code while a specified condition is true | `do{ i++; }while(i < x>)`
-For Each Loop | Performs an operation once for every element in the collection (usually used for iterating through arrays) | `arr.forEach(function(item, index,arr)){execute code}`
+For Loop | Loops through a block of code a number of times | `for( i = 0; i < arr.length; i++ ) { execute code }`
+For/in Loop | Loops through the properties of an object | `for( var value in iterable ) { execute code }`
+For/of Loop | Loops through a objects enumerables | `for( var value of iterable ) { execute code }`
+While Loop | loops through a block of code while a specified condition is true | `var i = 0; while( i < x ) { i++; }`
+Do/while Loop | also loops through a block of code while a specified condition is true | `do{ i++; } while( i < x )`
+For Each Loop | Performs an operation once for every element in the collection (usually used for iterating through arrays) | `arr.forEach( function( item, index,arr )){ execute code }`
 
 ### Documentation Operators
 
 Operator | Description | Example
 ---------|-------------|-------------
-= | Used to check for true/false in case of booleans | if(check = true)
-== | Equal to | if(x == 2)
-=== | Equal value and equal type | if(x === 2)
-! | False | if(!check)
-!= | Not equal | if(x != 0)
-!== | Not equal value or type | if(x !=== 0)
-< | Smaller than | if(x < 0)
-\> | Bigger than | if( x > 0)
-<= | Smaller than or equal | if(x <= 0)
-\>= | Bigger than or equal | if(x >= 0)
- \+ | Operator for addition | x + 2
-\- | Operator for subtraction | x - 2
-\* | Operator for multiplication | x * 2
-/ | Operator for division | x / 2
-% | Operator for modulus | x % 2
-&& | Both conditions have to be true | if(condition 1 && condition 2)
-|| | One of two (or more) conditions has to be true | if(condition 1 || condition 2)
+= | Used to check for true/false in case of booleans | `if( check = true )`
+== | Equal to | `if( x == 2 )`
+=== | Equal value and equal type | `if( x === 2 )`
+! | False | `if( !check )`
+!= | Not equal | `if( x != 0 )`
+!== | Not equal value or type | `if( x !=== 0 )`
+< | Smaller than | `if( x < 0 )`
+\> | Bigger than | `if( x > 0 )`
+<= | Smaller than or equal | `if( x <= 0 )`
+\>= | Bigger than or equal | `if( x >= 0 )`
+ \+ | Operator for addition | `x + 2`
+\- | Operator for subtraction | `x - 2`
+\* | Operator for multiplication | `x * 2`
+/ | Operator for division | `x / 2`
+% | Operator for modulus | `x % 2`
+&& | Both conditions have to be true | `if( condition 1 && condition 2 )`
+|| | One of two (or more) conditions has to be true | `if( condition 1 || condition 2 )`
 
 ### Documentation if-else 
 
