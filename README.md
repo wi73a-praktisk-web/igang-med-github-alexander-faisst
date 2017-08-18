@@ -31,7 +31,7 @@ Operator | Description | Example
 / | Operator for division | `x / 2`
 % | Operator for modulus | `x % 2`
 && | Both conditions have to be true | `if( condition 1 && condition 2 )`
-\|\| | One of two (or more) c | `if( condition 1 || condition 2 )`
+\|\| | One of two (or more) conditions have to be true | `if( condition 1 \|\| condition 2 )`
 
 ### Documentation if-else 
 
