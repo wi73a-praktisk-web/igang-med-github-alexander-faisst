@@ -1,25 +1,3 @@
-/*
-
-var i = -100;
-while(i <= 99){
-    if(i <= 0){
-        console.log("i is less than 0" + i);
-    }
-    else if(i === 0){
-        console.log("i is 0" + i);
-    }
-    else if(i >= 0){
-        console.log("i is bigger than 0" + i);
-    }
-    else 
-    {
-        console.log("there was a mistake" + i);
-    }
-    i++;
-}
-
-*/
-
 // ---------------------------------------- RNG'enerator ---------------------------------------
 
 /**
@@ -60,7 +38,7 @@ var x = getRandomInt(0,10);
 //Øvelse 2.2
 console.log(getRandomInt(0,10));
 
-//Øvelse 2.3
+//Øvelse 2.3 + 2.4
 var x = getRandomInt(0,10);
 if(x < 5){
     console.log("x is smaller than 5 = " + x);
@@ -97,7 +75,6 @@ else{
 }
 
 //Øvelse 5 
-
 var drik = "faxe_kondi";
 switch(drik) {
     case "faxe_kondi" :

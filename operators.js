@@ -16,7 +16,7 @@ function getRandomInt(min, max) {
 }
 
 // -------------------------------------------------------------------------------------------------
-/* 
+ 
 
 //Øvelse 1.1
 
@@ -56,7 +56,7 @@ console.log("++første = "  +(++forste));
 
 console.log("--første = " + (--forste));
 
-//Øvelse 2
+//Øvelse 2.1, 2.2 & 2.3
 
 for(i = 0;  i < 5; i++){
     var x = getRandomInt(0,50);
@@ -65,8 +65,8 @@ for(i = 0;  i < 5; i++){
     console.log("y = " + y);
     console.log("x += y = " + (x+=y));
 }
- */
-/* //Øvelse 3
+ 
+//Øvelse 3
 
 for(i = 0;  i < 5; i++){
     var x = getRandomInt(0,50);
@@ -80,7 +80,7 @@ for(i = 0;  i < 5; i++){
     else{
         console.log("breaking down crying, hopefully this point should never be reached though")
     }
-} */
+}
 
 //Øvelse 4
 
@@ -97,3 +97,5 @@ for(i = 0;  i < 5; i++){
         console.log("breaking down crying, hopefully this point should never be reached though")
     }
 }
+
+//Øvelse 5 - se readme.md

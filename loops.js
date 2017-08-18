@@ -85,7 +85,7 @@ function getRandomInt(min, max) {
 
  //Øvelse 4
 
- //....
+//se markdown
 
  //------------------------------------------ DEL 2 --------------------------------------------------
 
@@ -93,12 +93,12 @@ function getRandomInt(min, max) {
 
  var names = ["Anders Mattesen","Mikkel Svendsen","Laura Hansen", "Maria Andersen", "Oliver Efternavn", "Niels JegLøberTørForIdeer", "Harald HvorMangeNavneErJegOppePå", "Sofie OkJegSkalBrugeEtMere"];
 
- //Øvelse 2.1
+ //Øvelse 1.2
 names.forEach(function(name, index){
     console.log(index + ' ' + name);
  });
 
- //Øvelse 2.2
+ //Øvelse 2.1 + 2.2
 var artists = ["Michael Jackson","Elvis Presley","Ozzy Ozbourne", "Chester Bennington"];
 artists.forEach(function(artist, index){
     console.log(index + ' ' + artist);
@@ -117,7 +117,7 @@ console.dir(numbers);
 
 //-------------------------------- ANONYMOUS FUNCTION INSIDE FOR EACH LOOP ---------------------------
 
-/* numbers.forEach(function(number, index){
+numbers.forEach(function(number, index){
     var x = numbers[index + 1];
     if(numbers[index] > x){
         console.log("numbers[index] = " + numbers[index]);
@@ -134,10 +134,10 @@ console.dir(numbers);
         console.log("x = " + x);
         console.log("the next item is bigger than this one ");
     }
-}); */
+});
 
 // -------------------------------------------- FUNCTION DEFINED EXTERNALLY AND THEN CALLED ------------------------
-/* 
+
 function checkSmallerOrBigger(number, index){
     var x = numbers[index + 1];
     if(numbers[index] > x){
@@ -157,4 +157,4 @@ function checkSmallerOrBigger(number, index){
     }
 }
 
-numbers.forEach(checkSmallerOrBigger); */
+numbers.forEach(checkSmallerOrBigger);
