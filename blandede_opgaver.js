@@ -1,3 +1,12 @@
+/* Opret en funktion som beregner BMI ud fra højde og vægt. Funktionen skal returnere en af teksterne ud fra formlen du finder på http://www.bmitest.dk/
+
+    Undervægtig
+    Normalvægtig
+    Overvægtig
+    Fedme
+    Svær fedme
+
+Test funktionen med forskellige funktionskald */
 //BMI 
 var bmi = (w, h) => {
     var x = (w / h).toFixed(1);
@@ -25,6 +34,14 @@ var bmi = (w, h) => {
 }
 
 bmi(65, (Math.pow(1.75, 2)));
+
+
+/* 
+Opret en funktion som beregner en fartbøde for personbil under 3.500 kg. Du kan læse om taksterne på http://koerekort-guiden.dk/fartboeder Funktionen skal modtage flg. informationer:
+
+- Hastighedsbegrænsning
+- Kørt hastighed
+- Vejarbejde (ja/nej) Funktionen skal beregne og returnere bødetaksten, og evtentuelle Klip, betinget- eller ubetinget frakendelsle af kørekorten. */
 
 //Fartbøder
 
@@ -287,6 +304,11 @@ var fartbode = (max, actual, roadwork) => {
 
 fartbode(80, 200, true);
 
+/* 
+* Opret en funktion svarende til Fartbøden som bestemmer bødestørrelse og konsekvens ved forskellige promiller. 
+* Du kan hente information på http://koerekort-guiden.dk/spirituskoersel-og-straf 
+*/
+
 /**
  * promille = promille
  * x = amount of times stopped
@@ -394,6 +416,8 @@ var spritkorsel = (promille, x, y) => {
 
 spritkorsel(3, 4, 4);
 
+
+/* Skriv en funktion som tager imod en tekststreng og returnerer true eller false afhængigt af om tekststrengen er et palindrom. Palindromer på wikipedia */
 //Palindrome
 var palindrome = s => {
     var sReverse = s.split('').reverse().join("");
@@ -411,6 +435,12 @@ var palindrome = s => {
 
 palindrome("anna");
 
+/* Skriv kode der kan udskrive alle hele tal fra 1 til og med 137, og som følger dette regelsæt:
+
+    når et tal er deleligt med 3, udskrives 'Plum' i stedet for tallet
+    når et tal er deleligt med 5, udskrives 'Bus' i stedet for tallet
+    når et tal er deleligt med både 3 og 5, udskrives 'Plum Bus' i stedet for tallet
+ */
 //Plum Bus
 for (i = 1; i < 137; i++) {
     if (i % 3 === 0 && i % 5 === 0 && i !== 0) {
@@ -427,10 +457,15 @@ for (i = 1; i < 137; i++) {
     }
 }
 
+
+// Definér funktionen fjernMellemrumFoerOgEfter, der tager imod en tekststreng, fjerner evt. mellemrum før og efter teksten og returnerer den nye tekst.
 //Remove Spaces
 var removeSpaces = s => { console.log(s.trim()); return s.trim(); }
 removeSpaces("    anna     ");
 
+/* Definér funktionen ligEllerUlig, der tager imod et tal og returnerer 0 hvis det modtagede tal er lige eller 1 hvis det er ulige.
+
+Kan decimaltal som 3.7 være lige og ulige? Giv et bud på, hvordan man kunne håndtere dette. */
 //Lig Eller Ulig
 //Mit bud må være et man vel kunne runde decimaler op eller ned, men det ville stadig give unøjagtige resultater. Et decimaltal vil vel være og forblive et decimaltal. 
 //Det eneste virkelige alternativ ville være at gange det med hvad der end skal til for at man ender med enten 0 eller 1 hvis man så bagefter tager modulus af det - 
@@ -452,20 +487,24 @@ ligeEllerUlig(10);
 ligeEllerUlig(5);
 ligeEllerUlig(10.5);
 
+
+/* Definér funktionen rouletteArray (tal, muligheder_array), der tager imod et tal og et array af muligheder, og returnerer ét af mulighederne afhængigt af det tal man giver funktionen. */
 //Roulette Array
 var rouletteArray = (p,x) => {
     console.log(p[x]);
     return p[x];
 }
 
-; // returnerer ".bright"
-[".bright", ".dark"];  // returnerer ".dark"
+rouletteArray([".bright", ".dark"], 0);; // returnerer ".bright"
+rouletteArray([".bright", ".dark"], 1);  // returnerer ".dark"
 rouletteArray([".bright", ".dark"], 0);
 rouletteArray([".bright", ".dark"], 1);
 rouletteArray(["rød", "grøn", "blå"],0);
 rouletteArray(["rød", "grøn", "blå"],1);
 rouletteArray(["rød", "grøn", "blå"],2);
 
+
+// Definér funktionen vinkel360, der tager imod en vinkel i grader og returnerer en vinkel, der altid er mellem 0 og 360 (ekslusiv 360).
 //Vinkel 360
 //virker dog mærkeligt at skulle gøre det på denne måde..funktionen fungerer perfekt bare ved at returnere x's rest efter man har taget modulus af 360, men det tager ikke højde
 //-10 der returnerer 350..er ikke sikker på hvad der er meningen her, men der må jo være en
@@ -489,7 +528,8 @@ vinkel360(-10);
 vinkel360(365);
 vinkel360(725);
 
-//Vinkel 2D
+// Definér funktionen afstand2d (x1, y1, x2, y2), der tager imod 2 punkters X og Y positioner og returnerer afstanden mellem de 2 punkter.
+//Afstand 2D
 var vinkel2D = (x1,y1,x2,y2) => {
     console.log(Math.sqrt(Math.pow((x2-x1),2) +  Math.pow((y2-y1),2)));
 
@@ -505,6 +545,10 @@ vinkel2D(2,  2,  3,  3);
 vinkel2D(0,  0,  2,  2);
 vinkel2D(-1,  -1,  1,  1);
 
+// Problem:
+// Når den udleverede kode er kørt, indeholder variablen fejlbeskeder kun den sidste fejlbesked, "Du skal udfylde adresse feltet".
+
+// Gør det, der skal til, for at alle beskederne bliver lagt ned i variablen fejlbeskeder.
 //Fejlbeskeder
 // Disse oplysninger kommer selvfølgelig typisk fra en formular
 var navn = "";
@@ -527,6 +571,10 @@ if (adresse == "") {
 
 console.log (fejlbeskeder);
 
+// Problem:
+// Når den udleverede kode er kørt, indeholder fejlbeskeder array'et kun ét element, hvilket er den sidste fejlbesked, "Du skal udfylde email feltet".
+
+// Gør det, der skal til, for at vi ender med at have et array der indeholder i alt 3 elementer - ét for hver fejlbesked.
 //Fejlbeskeder #2
 // Disse oplysninger kommer selvfølgelig typisk fra en formular
 var brugernavn = "";
@@ -547,7 +595,10 @@ if (email == "") {
 	fejlbeskeder.push(["Du skal udfylde email feltet\n"]);
 }
 
+/* Problem:
+Den viser en fejl, når den udleverede kode udføres. Jeg forsøger bare at definére en helt simpelt funktion, der tager imod to tekster og sætter dem sammen med et mellemrum i mellem dem.
 
+Fix problemet og forklar hvad der var galt - bare skriv en kommentar i koden. */
 //Fejlbeskeder #3
 //Problemet er plingerne. De udgør forskellen om man bare lægger en række strings sammen eller om man referer til de variabler man prøver at sende funktionen i kaldet. 
 console.log (fejlbeskeder);

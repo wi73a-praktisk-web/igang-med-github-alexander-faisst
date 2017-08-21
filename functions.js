@@ -1,3 +1,5 @@
+// Opret en funktion som udskriver dit fornavn, efternavn og fødselsdag.
+// Alle tre værdier skal overføres via funktionskaldet til funktions argumenter for derefter at blive udskrevet.
 //Øvelse 1.A
 
 var firstName = "Alex";
@@ -10,6 +12,13 @@ function print(fornavn, efternavn, fDag) {
 
 print(firstName, surName, birthDay);
 
+/* 
+Opret en en række funktioner som henholdsvis lægger to tal sammen, trækker to tal fra hinanden, ganger to tal og dividerer to tal.
+i flg. øvelser oprettes nye funktioner
+    Opret herefter en variabel kaldet result udenfor funktionerne, hvor resultatet løbende opdateres, efterhånden funktionerne anvendes.
+    Opret nu en række funktionskald til de forskellige funktioner til dine beregninger og udskriv resultatet.
+    Opret evt. et par ekstra funktioner til andre regnefunktioner, pi, kvadratrod etc.
+ */
 //Øvelse 1.B
 var x = 10;
 var result = 0;
@@ -26,6 +35,13 @@ divide(x);
 multiply(x);
 sqRt();
 
+/* 
+Opret en funktion som kan afkorte og returnere en ny streng
+
+    Gå ind på W3Schools.com | String Methods og undersøg hvilken javascript-function du kan bruge til at afkorte en streng
+    Udbyg funktionen så den både modtager teksten og hvor meget den skal afkortes.
+    Du skal sikre, at funktionen ikke fejler, hvis den modtager en tekst som er kortere end det den skal afkortes til.
+ */
 //Øvelse 2
 var output;
 var s = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce interdum libero nec ante tristique";
@@ -39,10 +55,24 @@ substring(s, 0, 10);
 split(s);
 slice(s, n, m);
 
-//Øvelse 3.1 - 3.4
+/*
+ Opret en funktion som returnerer din profil svarende til eksemplet herover med Peter Pedal - men i en udvidet og meget gerne omskrevet version.
+
+    Udskriften skal stadig foregå i konsollen
+    Der skal indgå linjeskift i udskriften
+    Der skal ligge en beregning af din alder ud fra din fødselsdag- og år
+    Din profildata skal ligge i et array
+*/
 var profile = p => console.log(p[0] + " " + p[1] + "\n" + " er født i " + p[2] + "\n" + " og er " + (new Date().getFullYear() - p[2]) + " år gammel");
 profile(["Alexander", "Faisst", 1992]);
 
+/*
+Ekstra udfordringer
+Det forventes ikke at du kan løse følgende lige nu, men kig på dem og så løser vi dem i grupperarbejde senere.
+    A. Opret et array med flere profiler
+    B. Opret en ny funktion som udover arrayet modtager et index (id) for den profil der skal udskrives.
+    C. Omskriv funktionen, så den udskriver alle profiler - hvis ikke der overføres et index/id */
+//Øvelse 3.1 - 3.4
 //Ekstra udfordringer A
 var profile = function (p = data,n = null) {
     var result = "";

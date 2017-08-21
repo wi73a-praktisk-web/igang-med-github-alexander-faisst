@@ -1,4 +1,4 @@
-
+//Create an array named cars, assign the values "Saab", "Volvo" and "BMW" to it, and display it.
 //Øvelse 5.1
 
 /* 
@@ -17,7 +17,7 @@
     </html>
 */
 
-
+//Display the "Volvo" item of the cars array.
 //Øvelse 5.2
 
 /* 
@@ -35,7 +35,7 @@
     </body>
     </html>
 */
-
+//Change the first item of cars to "Opel" by referring to the index number, and display the whole array
 //Øvelse 5.3
 
 /*
@@ -54,6 +54,7 @@
     </html>
 */
 
+//Use the length property to display the number of array items in cars.
 //Øvelse 5.4
 
 /* 
@@ -72,6 +73,7 @@
     </html>
 */
 
+//Use the length property to add a new item to cars: Mercedes.
 //Øvelse 5.5
 
 /*
@@ -91,6 +93,16 @@
     </html>
 */
 
+/* 
+
+1 - Opret et array i variablen <personer>,  som indeholder minimum 3 andre arrays.
+
+2 - De 3 arrays skal indeholde to oplysninger:
+    fornavn og efternavn  (bare vælg nogle tilfældige navne i første omgang)
+    Udskriv <personer> variablen i konsollen.
+
+
+3 - Hvis strukturen ser korrekt ud, så ret og tilføj navnene, så dine inderste arrays indeholder navnene på mimimum 2 elever fra hvert hold på din årgang, så i alt 6 elever. */
 //Øvelse 6.1,6.2 & 6.3
 
 var navne = ["Alex Faisst", "Peter Hansen", "Malte Mulbjerg", "Jesper Rasmussen", "Sofie Nielsen", "Rita Andersen"];
