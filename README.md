@@ -15,7 +15,8 @@ For Each Loop | Performs an operation once for every element in the collection (
 
 Operator | Description | Example
 ---------|-------------|-------------
-= | Used to check for true/false in case of booleans and for assigning a variables value | `if( check = true )`__ `var x = n;`
+= | Used to check for true/false in case of booleans and for assigning a variables value | `if( check = true )`
+ `var x = n;`
 == | Equal to | `if( x == 2 )`
 === | Equal value and equal type | `if( x === 2 )`
 ! | False | `if( !check )`
