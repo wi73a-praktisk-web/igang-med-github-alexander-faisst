@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //fetch, then, catch
+        //aquires a bunch of data from a URL/API/Havent really understood that part yet and displays it in a table
+        fetch('https://swapi.co/api/people/')
+            //checks the response, if the url is correct and throws an error if this is not the case
+            .then((response) => {
+                if (response.status == 200) {
+                    return response.json();
+                }
+                else if (response.status != 200) {
+                    throw new Error('Response was not 200');
+                }
+            })
+            //fills the table with the data
+            .then((json) => {
+
+                var table_b = document.getElementById('table_body');
+                var table_h = document.getElementById('table_header');
+                var tr_h = document.createElement('tr');
+
+                //headers
+                for (item in json.results[0]) {
+                    tr_h.innerHTML += '<th>' + item + '</th>';
+                    table_h.appendChild(tr_h);
+                }
+                //data_rows
+                json.results.forEach(person => {
+                    var tr_b = document.createElement('tr');
+                    for (var key in person) {
+                        if (person.hasOwnProperty(key)) {
+                            tr_b.innerHTML += '<td>' + person[key] + '</td>';
+                        }
+                    }
+                    table_b.appendChild(tr_b);
+                });
+            })
+            //if there wan an error, it will be processed here + in this case just printed to the console
+            .catch((error) => {
+                console.log("There was some kind of error :" + error.message);
+            })
+            ;
+    </script>
+</head>
+
+<body>
+    <div id=content></div>
+    <table>
+        <thead id=table_header>
+        </thead>
+        <tbody id=table_body>
+        </tbody>
+    </table>
+</body>
+
+</html>
