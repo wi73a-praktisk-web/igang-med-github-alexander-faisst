@@ -61,6 +61,26 @@ funktionskald | A function being called, optionally with parameters. I find it d
 hoisting | Calling a method that is defined further down in the file - not that while this works for standard functions, it doesn't work for anonymous ones. 
 funktioner i funktioner | This concepts main purpose, as far as i understand, is to perform the same operations on fewer lines of code, as well as possibly making ones code more elegant. This concept can also be used in order to perform recursive functions, but much more on that later. 
 
+#### Arrow functions 
+
+```
+if (currentUser) {
+  function test() { // this is the important line ...
+    console.log('Nope.');
+  }
+}
+```
+is precisely the same as 
+
+```
+let test;
+if (currentUser) {
+  test = () => { // this is the line important line ...
+    console.log('Yup.');
+  };
+}
+```
+
 ### Documentation Callbacks
 
 Callbacks are functions that are sent to other functions in form of function parameters. 

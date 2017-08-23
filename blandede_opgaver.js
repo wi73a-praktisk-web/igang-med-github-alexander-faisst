@@ -35,7 +35,6 @@ var bmi = (w, h) => {
 
 bmi(65, (Math.pow(1.75, 2)));
 
-
 /* 
 Opret en funktion som beregner en fartbøde for personbil under 3.500 kg. Du kan læse om taksterne på http://koerekort-guiden.dk/fartboeder Funktionen skal modtage flg. informationer:
 
@@ -46,10 +45,7 @@ Opret en funktion som beregner en fartbøde for personbil under 3.500 kg. Du kan
 //Fartbøder
 
 var fartbode = (max, actual, roadwork) => {
-    var bodetakst = 0;
-    var klip = false;
-    var betinget = false;
-    var ubetinget = false;
+    var bodetakst = 0, klip = false, betinget = false, ubetinget = false;
     switch (max) {
         case 50:
             switch (true) {
