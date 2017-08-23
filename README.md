@@ -146,9 +146,10 @@ prøv koden af, og skift **true** ud med **false**!
 
 ## Funktioner der retunerer et promise
 
-Det sidste koncept I skal se nærmere på, er at have en funktion der lover et **promise**
+Et promise er principielt et ikke fysiskt, konceptuelt objekt der repræsenterer et løfte om, at en proces er igang, omend ikke færdig endnu. Ift. callbacks giver promises mulighed for 
+at have flere promises i luften ad gangen (man kan godt med callbacks, men det er meget mere besværligt). Det smarte er, at man kan "arbejde videre" med resultatet på trods af at 
+processen stadig er igang. Dette er meget fordelagtigt, hvis man har flere processer som er afhængige af hinanden - hvor f.eks. den ene proces har brug for den forriges output/data til at kunne gå igang. Velegnet til kombination med asynkronitet. 
 
-Dette koncept vil vi arbejde videre på I morgen, hvor vi vil benytte en indbygget funktion der bygger på promises. Så brug tid på at se denne kode igennem.
 ```javascript
 function thirdPromise(someBoolValue) {
    return new Promise((resolve, reject) => {
@@ -176,12 +177,10 @@ thirdPromise(true)
 Læg i øvrigt mærke til hvad der sker når reject funktionen kaldes. Der benyttes **new Error()** til at sende en detaljeret fejlbesked til **.catch()** funktionen. 
 
 En anden detalje der er værd at se nærmere på, er at der er **to** .then() efter hindanden... 
-Prøv at fjerne kommentaren så **throw new Error()** bliver udført.
+Dette minder i nogen grad om callbacks, dog med en væsentlig forskel: for en enkel operation (fetch something, process it and display it) er callbacks helt fine - men 
+så snart der kommer flere requests samtidigt, bliver koden meget hurtigt meget kludret. Promises derimod løser dette problem på elegant vis, ikke mindst ift. error handling.  
+Det fungerer således: 
 
-
-Frygt ej hvis det virker uoverskueligt lige nu! I morgen vil vi arbejde meget mere med konceptet, og det bliver meget mere *hands on* så hav tålmodighed.
-
-Formålet med i dag, er at introducere til konceptet, den dybere forståelse kommer senere igennem mere praktisk arbejde.
 
 ### Documentation Asynkronitet
 
