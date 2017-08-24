@@ -9,7 +9,7 @@ function thirdPromise(someBoolValue) {
     //    }, 2000);
     })
  }
- 
+
  thirdPromise(true)
     .then((success) => {
        console.log(success);
