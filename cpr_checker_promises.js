@@ -1,5 +1,5 @@
 
-const cpr_number = "0411923193", 
+const cpr_number = "0411923193",
     day = cpr_number.charAt(0) + cpr_number.charAt(1),
     month = cpr_number.charAt(2) + cpr_number.charAt(3),
     year = cpr_number.charAt(4) + cpr_number.charAt(5),
@@ -51,23 +51,23 @@ var checkCP7 = number => {
         switch (cp7) {
             //cp7 between 0-3 (both inclusive)
             case 0: case 1: case 2: case 3:
-                (year >= 00 && year <= 99) ? resolve("the person's age is = " + (2017 - parseInt("19" + year)) + " and the gender is = " + gender) : 
-                                           reject(); break;
+                (year >= 00 && year <= 99) ? resolve("the person's age is = " + (2017 - parseInt("19" + year)) + " and the gender is = " + gender) :
+                    reject(); break;
             //cp7 is 4
             case 4:
-                year >= 00 && year <= 36 ? resolve("the person's age is = " + new Date().getFullYear() - parseInt("20" + year) + " and the gender is = " + gender) : 
-                year >= 37 && year <= 99 ? resolve("the person's age is = " + new Date().getFullYear() - parseInt("19" + year) + " and the gender is = " + gender) : 
-                                           reject(); break;
+                year >= 00 && year <= 36 ? resolve("the person's age is = " + new Date().getFullYear() - parseInt("20" + year) + " and the gender is = " + gender) :
+                    year >= 37 && year <= 99 ? resolve("the person's age is = " + new Date().getFullYear() - parseInt("19" + year) + " and the gender is = " + gender) :
+                        reject(); break;
             //cp7 between 5 and 8 (both inclusive)
             case 5: case 6: case 7: case 8:
                 year >= 00 && year <= 57 ? resolve("the person's age is = " + new Date().getFullYear() - parseInt("20" + year) + " and the gender is = " + gender) :
-                year >= 58 && year <= 99 ? resolve("the person's age is = " + new Date().getFullYear() - parseInt("18" + year) + " and the gender is = " + gender) : 
-                                           reject(); break;
+                    year >= 58 && year <= 99 ? resolve("the person's age is = " + new Date().getFullYear() - parseInt("18" + year) + " and the gender is = " + gender) :
+                        reject(); break;
             //cp7 is 9
             case 9:
                 year >= 00 && year <= 36 ? resolve("the person's age is = " + 2017 - parseInt("20" + year) + " and the gender is = " + gender) :
-                year >= 37 && year <= 99 ? resolve("the person's age is = " + 2017 - parseInt("19" + year) + " and the gender is = " + gender) : 
-                                           reject(); break;
+                    year >= 37 && year <= 99 ? resolve("the person's age is = " + 2017 - parseInt("19" + year) + " and the gender is = " + gender) :
+                        reject(); break;
             //cp7 is invalid
             default:
                 console.log("cp7 is invalid");
@@ -85,6 +85,8 @@ var checkCPR = number => {
             }).then(nextSuccess => {
                 console.log(nextSuccess);
                 return checkDay(day);
+            }).catch(error => {
+                console.log(error);
             })
     }, 2000);
 

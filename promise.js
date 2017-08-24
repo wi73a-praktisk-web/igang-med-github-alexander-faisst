@@ -23,3 +23,4 @@ function thirdPromise(someBoolValue) {
     }).catch((error) => {
        console.log(error);
     })
+
