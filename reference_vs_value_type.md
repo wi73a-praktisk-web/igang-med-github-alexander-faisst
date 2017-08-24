@@ -29,3 +29,6 @@ In this example, a's value is assigned directly to a new value b, which holds th
 In this example, b's value IS altered. This is because a doesn't hold the array itself - it holds only a reference to it's physical location. As a result, when a's value 
 is assigned to b, b doesn't receive a value - it receives a reference to the array. In other words, a second reference to the array is created, instead of a copy of the value itself (of the array itself). This means that when one of the references pointing to the array is used in order to alter that array, the array will precisely have been altered, when 
 the second reference is used to access that same array. 
+
+On a last note i want to add, that string's technically are primitive types as well, however they don't have a fixed size, since they can contain just about any amount of text. 
+Because of this, they can be regarded both as a reference type behaving like a primitive type or a primitive type behaving like a reference type. 
