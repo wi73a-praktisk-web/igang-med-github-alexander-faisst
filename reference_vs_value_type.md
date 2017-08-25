@@ -20,10 +20,10 @@ To illustrate the distinction, i will make use of the following two examples.
 In this example, a's value is assigned directly to a new value b, which holds the value itself. Therefore, b's value doesn't change when a's value is altered. 
 
 ```
-    var a = [1,2,3];  // Initialize a variable to refer to an array
-    var b = a;        // Copy that reference into a new variable
+    var a = [1,2,3];  // Initialize a variable to refer to an array [1,2,3]
+    var b = a;        // Copy that reference into a second variable
     a[0] = 99;        // Modify the array using the original reference
-    alert(b);         // Display the changed array [99,2,3] using the new reference
+    alert(b);         // Display the changed array [99,2,3] using the new reference; the array has changed, and both references point to that same array
 ```
 
 In this example, b's value IS altered. This is because a doesn't hold the array itself - it holds only a reference to it's physical location. As a result, when a's value 
