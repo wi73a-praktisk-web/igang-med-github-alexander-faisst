@@ -39,14 +39,14 @@ let checkLength = s => {
 //check at nummeret består af tal
 var checkIfNan = number => {
     return new Promise((resolve, reject) => {
-        for (let i = 0; i < cpr_number.length - 1; i++) {
+        for (let i = 0; i < cpr_number.length; i++) {
             !isNaN(parseInt(cpr_number[i])) ? resolve("success, all character are digits") : reject("cpr number contains a letter and is hence invalid");
         }
     })
 }
 
 //evaluer det 7. ciffer
-var checkCP7 = number => {
+var checkCP7 = () => {
     return new Promise((resolve, reject) => {
         switch (cp7) {
             //cp7 between 0-3 (both inclusive)
@@ -99,7 +99,7 @@ var checkCPR = number => {
             return checkYear(year);
         }).then(nextSuccess => {
             console.log(nextSuccess);
-            return checkCP7(cp7);
+            return checkCP7();
         }).then(nextSuccess => {
             console.log(nextSuccess);
         }).catch(error => {

@@ -9,7 +9,7 @@ For/in Loop | Loops through the properties of an object | `for( var value in ite
 For/of Loop | Loops through a objects enumerables | `for( var value of iterable ) { execute code }`
 While Loop | loops through a block of code while a specified condition is true | `var i = 0; while( i < x ) { i++; }`
 Do/while Loop | also loops through a block of code while a specified condition is true | `do{ i++; } while( i < x )`
-For Each Loop | Performs an operation once for every element in the collection (usually used for iterating through arrays) | `arr.forEach( function( item, index,arr )){ execute code }`
+For Each Loop | Performs an operation once for every element in the collection (usually used for iterating through arrays) | `arr.forEach( function( item, index,arr ){ execute code })`
 
 ### Documentation Operators
 
